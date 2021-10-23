@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/homepage.dart';
+import 'package:myapp/FaQ/qna.dart';
+import 'Home/homepage.dart';
 
 void main() => runApp(MyApp());
 

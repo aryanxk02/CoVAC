@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_field, avoid_unnecessary_containers, avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/slotsearch.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/Home/Slots/slotsearch.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,11 +21,11 @@ class _HomePageState extends State<HomePage> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: Info',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: QnA',
       style: optionStyle,
     ),
   ];
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue[800],
+        selectedItemColor: Color(0xFF9E40C8),
         onTap: _onItemTapped,
       ),
       body: Container(
@@ -81,50 +82,75 @@ class _HomePageState extends State<HomePage> {
                       height: MediaQuery.of(context).size.height - 250,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                          color: Color(0xFFBBDEFB),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color(0xFFDBE6F6),
+                              Color(0xFFF8FFAE),
+                            ],
+                          ),
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(55),
                               topRight: Radius.circular(55))),
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 100,
+                            height: 80,
                           ),
                           Text(
                             "Search for your nearest \nvaccination centers",
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.bold),
+                            style: GoogleFonts.montserrat(
+                              textStyle: TextStyle(
+                                fontSize: 26,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(
                             height: 50,
                           ),
-                          Text(
-                            "Get a preview list of the nearest centers and check availability of vaccination slots",
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Text(
+                              "Get a preview list of the nearest centers and check availability of vaccination slots",
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                           SizedBox(
-                            height: 45,
+                            height: 50,
                           ),
                           ElevatedButton(
                             onPressed: () {
                               print("Button Pressed!");
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SlotSearch()));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SlotSearch(),
+                                ),
+                              );
                             },
                             child: Container(
                               child: Text(
                                 "Get Started",
-                                style: TextStyle(fontSize: 17),
+                                style: GoogleFonts.montserrat(
+                                  textStyle: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w400),
+                                ),
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
                               fixedSize: Size(160, 55),
-                              primary: Colors.blueAccent,
+                              primary: Color(0xFF9E40C8),
                             ),
                           ),
                         ],

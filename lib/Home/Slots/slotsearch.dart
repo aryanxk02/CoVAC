@@ -1,10 +1,10 @@
 // ignore_for_file: avoid_print, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:myapp/Home/Slots/slotresults.dart';
 import 'dart:convert';
-
-import 'package:myapp/screens/slotresults.dart';
 
 class SlotSearch extends StatefulWidget {
   const SlotSearch({Key? key}) : super(key: key);
@@ -49,7 +49,27 @@ class _SlotSearchState extends State<SlotSearch> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Available Slots"),
+        centerTitle: true,
+        title: Text(
+          "Search Available Slots",
+          style: GoogleFonts.montserrat(
+            textStyle: TextStyle(
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color(0xFF6B41B4),
+                Color(0xFFD43DDD),
+              ],
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -61,9 +81,21 @@ class _SlotSearchState extends State<SlotSearch> {
             Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/injection.jpg"))),
+                      image: AssetImage("assets/vaccine2.jpg"))),
               height: 250,
               margin: EdgeInsets.all(20),
+            ),
+            Text(
+              "Enter Details",
+              style: GoogleFonts.montserrat(
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             TextField(
               // property: object
@@ -91,7 +123,12 @@ class _SlotSearchState extends State<SlotSearch> {
             ),
             Text(
               "Select Month",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
+                ),
+              ),
             ),
             Container(
               margin: const EdgeInsets.only(top: 2),
@@ -134,18 +171,25 @@ class _SlotSearchState extends State<SlotSearch> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
             Container(
               width: double.infinity,
-              height: 50,
+              height: 65,
               child: Column(
                 children: [
                   ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            Theme.of(context).primaryColor)),
-                    child: Text("Find Slots"),
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: Size(160, 55),
+                      primary: Color(0xFF9E40C8),
+                    ),
+                    child: Text(
+                      "Find Slots",
+                      style: GoogleFonts.montserrat(
+                          textStyle: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      )),
+                    ),
                     onPressed: () {
                       fetchslot();
                     },

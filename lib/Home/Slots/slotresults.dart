@@ -18,6 +18,7 @@ class _SlotResultsState extends State<SlotResults> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Available Slots"),
+        centerTitle: true,
       ),
       body: Container(
         color: Colors.amberAccent,
