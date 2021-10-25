@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:myapp/FaQ/qna.dart';
+import 'package:myapp/Tracker/toolkit.dart';
+import 'package:myapp/tabs_page.dart';
 import 'Home/homepage.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: TabsPage(),
     );
   }
 }

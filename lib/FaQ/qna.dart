@@ -64,116 +64,118 @@ class _QnAState extends State<QnA> {
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Color(0xFFFFF9AD),
-                gradient: LinearGradient(
-                  colors: [Color(0xFF6B41B4), Color(0xFFD43DDD)],
-                ),
-              ),
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: [
-                  Container(
-                    height: 250,
-                    decoration: BoxDecoration(
-                      // color: Color(0xFFFFF9AD),
-                      image: DecorationImage(
-                        image: AssetImage("assets/faq.png"),
-                        fit: BoxFit.fill,
-                      ),
-                      gradient: LinearGradient(
-                        colors: [Color(0xFF6B41B4), Color(0xFFD43DDD)],
-                      ),
-                    ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xFFFFF9AD),
+                  gradient: LinearGradient(
+                    colors: [Color(0xFF6B41B4), Color(0xFFD43DDD)],
                   ),
-                  Container(
-                    // clipBehavior: Clip.antiAlias,
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height - 250,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFEEF0F6),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(55),
-                        topRight: Radius.circular(55),
+                ),
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 250,
+                      decoration: BoxDecoration(
+                        // color: Color(0xFFFFF9AD),
+                        image: DecorationImage(
+                          image: AssetImage("assets/faq.png"),
+                          fit: BoxFit.fill,
+                        ),
+                        gradient: LinearGradient(
+                          colors: [Color(0xFF6B41B4), Color(0xFFD43DDD)],
+                        ),
                       ),
                     ),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 35,
+                    Container(
+                      // clipBehavior: Clip.antiAlias,
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height - 250,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFEEF0F6),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(55),
+                          topRight: Radius.circular(55),
                         ),
-                        Container(
-                          child: Text(
-                            "Frequently Asked Questions",
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                fontSize: 22,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 35,
+                          ),
+                          Container(
+                            child: Text(
+                              "Frequently Asked Questions",
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                  fontSize: 22,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Expanded(
-                          child: ListView.builder(
-                            itemCount: _questionsAndAnswers.length,
-                            itemBuilder: (context, index) => Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin: EdgeInsets.only(
-                                  left: 20, right: 20, bottom: 20),
-                              padding: EdgeInsets.only(top: 8, bottom: 8),
-                              // height: 110,
-                              child: InkWell(
-                                child: Container(
-                                  margin: EdgeInsets.all(20),
-                                  child: Text(
-                                    _questionsAndAnswers[index]['question']!,
-                                    textAlign: TextAlign.start,
-                                    style: GoogleFonts.montserrat(
-                                      textStyle: TextStyle(
-                                        fontSize: 17,
-                                        color: Colors.black,
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Expanded(
+                            child: ListView.builder(
+                              itemCount: _questionsAndAnswers.length,
+                              itemBuilder: (context, index) => Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.only(
+                                    left: 20, right: 20, bottom: 20),
+                                padding: EdgeInsets.only(top: 8, bottom: 8),
+                                // height: 110,
+                                child: InkWell(
+                                  child: Container(
+                                    margin: EdgeInsets.all(20),
+                                    child: Text(
+                                      _questionsAndAnswers[index]['question']!,
+                                      textAlign: TextAlign.start,
+                                      style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                          fontSize: 17,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => AnswerOne(
-                                        answer: _questionsAndAnswers[index]
-                                            ['answer']!,
-                                        question: _questionsAndAnswers[index]
-                                            ['question']!,
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => AnswerOne(
+                                          answer: _questionsAndAnswers[index]
+                                              ['answer']!,
+                                          question: _questionsAndAnswers[index]
+                                              ['question']!,
+                                        ),
                                       ),
-                                    ),
-                                  );
-                                },
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
+                                    );
+                                  },
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(20),
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unused_field, avoid_unnecessary_containers, avoid_print
+// ignore_for_file: prefer_const_constructors, unused_field, avoid_unnecessary_containers, avoid_print, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,52 +12,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Info',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: QnA',
-      style: optionStyle,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Info',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'QnA',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFF9E40C8),
-        onTap: _onItemTapped,
-      ),
       body: Container(
         child: SingleChildScrollView(
           child: Column(
@@ -69,12 +26,10 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      // color: Colors.red,
                       height: 250,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("assets/homepage.jpg"),
-                          // fit: BoxFit.cover,
                         ),
                       ),
                     ),
@@ -143,8 +98,9 @@ class _HomePageState extends State<HomePage> {
                                 "Get Started",
                                 style: GoogleFonts.montserrat(
                                   textStyle: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.w400),
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w400,
+                                  ),
                                 ),
                               ),
                             ),

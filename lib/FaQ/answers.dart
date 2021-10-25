@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AnswerOne extends StatelessWidget {
   const AnswerOne({
@@ -13,7 +14,13 @@ class AnswerOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Answers"),
+        title: Text(
+          "Answers",
+          style: GoogleFonts.montserrat(
+            fontSize: 17,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
