@@ -1,8 +1,10 @@
 # CoVAC - Covid 19 Vaccine Availability Checker
 
 ## Introduction 📌
-- CoVAC is an android mobile application developed to provide users the facility to check the available slots for various vaccines - COVISHEILD, COVAXIN, and SPUTNIK with their corresponding Postal Codes of India. 
+- CoVAC is an android application developed to provide users the facility to check the available slots for various vaccines - COVISHEILD, COVAXIN, and SPUTNIK with their corresponding Postal Codes of India. 
 - Fetches real time updated data about the Hospital Names present in the vicinity, along with other details such as Slot Timings, Vaccine Types, Fee, etc.
+- The app includes real-time updated data fetched from the servers that provide a plethora of information related to Covid 19 and its latest trends, global and local statistics, information of vaccine doses, related articles, and blogs.
+- Contains a list of Frequently Asked Questions regarding the Virus and its related terms.
 
 ## Application Preview✨
 <p align="center">
