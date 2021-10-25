@@ -1,16 +1,15 @@
-# myapp
+# CoVAC - Covid 19 Vaccine Availability Checker
 
-A new Flutter project.
+## Introduction 📌
+- CoVAC is an android mobile application developed to provide users the facility to check the available slots for various vaccines - COVISHEILD, COVAXIN, and SPUTNIK with their corresponding Postal Codes of India. 
+- Fetches real time updated data about the Hospital Names present in the vicinity, along with other details such as Slot Timings, Vaccine Types, Fee, etc.
 
-## Getting Started
+## Application Preview✨
+<p align="center">
+  <img width="170" height="330" src="https://user-images.githubusercontent.com/59761275/138751886-2b1cd61c-77c7-4923-80e9-5d143a385fac.png"/>
+  <img width="170" height="330" src="https://user-images.githubusercontent.com/59761275/138753035-8f94887c-e0be-42dd-b43d-22b00f6d73a2.png"/>
+  <img width="170" height="330" src="https://user-images.githubusercontent.com/59761275/138753268-cfa19047-bc37-45d1-accf-adb78de6453e.png"/>
+  <img width="170" height="330" src="https://user-images.githubusercontent.com/59761275/138753375-90986ee4-3476-4981-b448-3d74a97a0300.png"/>
+  <img width="170" height="330" src="https://user-images.githubusercontent.com/59761275/138753526-c7d6d80b-74c2-4c57-a983-a6c2bbfa52e9.png"/>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  
