@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:myapp/Tracker/toolkit.dart';
 import 'package:myapp/tabs_page.dart';
-import 'Home/homepage.dart';
 
 void main() => runApp(MyApp());
 

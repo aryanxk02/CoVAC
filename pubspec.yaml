@@ -38,9 +38,16 @@ dependencies:
   google_fonts: ^2.1.0
   webview_flutter: ^2.1.2
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/CoVAC.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/logo_foreground.png"
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.9.2
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -66,6 +73,7 @@ flutter:
     - homepage.jpg
     - faq.png
     - vaccine2.jpg
+    - CoVAC.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
